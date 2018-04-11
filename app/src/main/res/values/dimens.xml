@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="teamName">14sp</dimen>
+    <dimen name="score_txt_size">56sp</dimen>
+    <dimen name="margin_sixteen">16dp</dimen>
+    <dimen name="margin_eight">8dp</dimen>
+    <dimen name="margin_tweentyfour">24dp</dimen>
+    <dimen name="margin_thirdtytwo">32dp</dimen>
+</resources>

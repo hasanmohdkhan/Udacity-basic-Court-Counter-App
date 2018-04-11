@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#ff0054</color>
+    <color name="primaryLightColor">#ff5b80</color>
+    <color name="primaryDarkColor">#c4002c</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="teamNameColor">#616161</color>
+    <color name="scoreTextColor">#000000</color>
+    <color name="colorTeamA">#1de9b6</color>
+    <color name="colorTeamB">#b388ff</color>
+    <color name="colorTeamBLightShade">#b0b388ff</color>
+    <color name="colorTeamBLight">#ddb388ff</color>
+    <color name="resetButtonColor">#eeff41</color>
+</resources>
