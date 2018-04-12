@@ -16,7 +16,7 @@ UI
 
 Live Demo - Youtube 
 ===============================
-<a href="https://www.youtube.com/watch?v=1c29dF-rWDk" target="_blank"><img src="https://github.com/hasanmohdkhan/Hello-Android---Udacity-basic-/blob/master/youtube.png" 
+<a href="https://www.youtube.com/watch?v=1c29dF-rWDk" target="_blank"><img src="https://github.com/hasanmohdkhan/Udacity-basic-Court-Counter-App/blob/master/screen.png"
 alt="IMAGE ALT TEXT HERE" width="600px"  border="10" /></a>
 
 
