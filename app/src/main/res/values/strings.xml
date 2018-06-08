@@ -8,4 +8,6 @@
     <string name="txt_free_throw">Free throw</string>
 
     <string name="string_reset">Reset</string>
+    <string name="team_a_key">TeamA</string>
+    <string name="team_b_key">TeamB</string>
 </resources>

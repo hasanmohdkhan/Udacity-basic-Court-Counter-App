@@ -11,98 +11,105 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreTeamA = 0;
-    int scoreTeamB = 0 ;
-    Button reset;
+    private int mScoreTeamA = 0;
+    private int mScoreTeamB = 0;
+    private TextView mTeamATextView;
+    private TextView mTeamBTextView;
+    private Button reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         reset = findViewById(R.id.reset_button);
-        //displayForTeamA(54);
+        mTeamATextView = findViewById(R.id.team_a_score);
+        mTeamBTextView = findViewById(R.id.team_b_score);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.menu,menu);
-        int orienation = this.getResources().getConfiguration().orientation;
-        if(orienation  == Configuration.ORIENTATION_PORTRAIT){
+        getMenuInflater().inflate(R.menu.menu, menu);
+        int orientation = this.getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             menu.findItem(R.id.reset_menu).setVisible(false);
             reset.setVisibility(View.VISIBLE);
-        }
-        else {
+        } else {
             menu.findItem(R.id.reset_menu).setVisible(true);
             reset.setVisibility(View.INVISIBLE);
-            }
+        }
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id =item.getItemId();
-         if(id == R.id.reset_menu){
-            scoreTeamA=0;
-            scoreTeamB=0;
-            displayForTeamA(scoreTeamA);
-            displayForTeamB(scoreTeamB);
+        int id = item.getItemId();
+        if (id == R.id.reset_menu) {
+            mScoreTeamA = 0;
+            mScoreTeamB = 0;
+            displayForTeamA(mScoreTeamA);
+            displayForTeamB(mScoreTeamB);
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public void addThreePointsTeamA(View view){
-        scoreTeamA+=3;
-        displayForTeamA(scoreTeamA);
+    public void addThreePointsTeamA(View view) {
+        mScoreTeamA += 3;
+        displayForTeamA(mScoreTeamA);
     }
 
-    public void addTwoPointsTeamA(View view){
-        scoreTeamA+=2;
-        displayForTeamA(scoreTeamA);
-    }
-    public void addOnePointsTeamA(View view){
-        scoreTeamA+=1;
-        displayForTeamA(scoreTeamA);
+    public void addTwoPointsTeamA(View view) {
+        mScoreTeamA += 2;
+        displayForTeamA(mScoreTeamA);
     }
 
-    /**
-     * Displays the given score for Team A.
-     */
+    public void addOnePointsTeamA(View view) {
+        mScoreTeamA += 1;
+        displayForTeamA(mScoreTeamA);
+    }
+
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
-
-    /**
-     * Displays the given score for Team A.
-     */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        TextView scoreView = findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
-
-
 
     public void addThreePointsTeamB(View view) {
-        scoreTeamB+=3;
-        displayForTeamB(scoreTeamB);
+        mScoreTeamB += 3;
+        displayForTeamB(mScoreTeamB);
     }
 
     public void addTwoPointsTeamB(View view) {
-        scoreTeamB+=2;
-        displayForTeamB(scoreTeamB);
+        mScoreTeamB += 2;
+        displayForTeamB(mScoreTeamB);
     }
 
     public void addOnePointsTeamB(View view) {
-        scoreTeamB+=1;
-        displayForTeamB(scoreTeamB);
+        mScoreTeamB += 1;
+        displayForTeamB(mScoreTeamB);
     }
 
     public void resetScore(View view) {
-        scoreTeamA=0;
-        scoreTeamB=0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        mScoreTeamA = 0;
+        mScoreTeamB = 0;
+        displayForTeamA(mScoreTeamA);
+        displayForTeamB(mScoreTeamB);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(getString(R.string.team_a_key), mScoreTeamA);
+        outState.putInt(getString(R.string.team_b_key), mScoreTeamB);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mTeamATextView.setText(String.valueOf(savedInstanceState.getInt(getString(R.string.team_a_key))));
+        mTeamBTextView.setText(String.valueOf(savedInstanceState.getInt(getString(R.string.team_b_key))));
     }
 }

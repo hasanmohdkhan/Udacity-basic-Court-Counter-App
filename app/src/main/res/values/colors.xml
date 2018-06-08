@@ -11,4 +11,6 @@
     <color name="colorTeamBLightShade">#b0b388ff</color>
     <color name="colorTeamBLight">#ddb388ff</color>
     <color name="resetButtonColor">#eeff41</color>
+    <color name="btn_background_color_level_two">#cc12ffc4</color>
+    <color name="btn_background_color_level_three">#7b1de9b6</color>
 </resources>
