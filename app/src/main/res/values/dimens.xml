@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="teamName">30sp</dimen>
+    <dimen name="team_name">30sp</dimen>
     <dimen name="score_txt_size">112sp</dimen>
     <dimen name="score_txt_size_landscape">56sp</dimen>
     <dimen name="margin_sixteen">16dp</dimen>
@@ -9,6 +9,6 @@
     <dimen name="margin_thirdtytwo">32dp</dimen>
     <dimen name="linearlayout_width_0dp">0dp</dimen>
     <dimen name="view_width_1dp">1dp</dimen>
-    <dimen name="team_title_for_landscape">28sp</dimen>
+    <dimen name="team_title_for_landscape">20sp</dimen>
     <dimen name="margin_from_reset_btn">130dp</dimen>
 </resources>

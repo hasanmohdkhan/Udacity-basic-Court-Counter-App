@@ -19,7 +19,7 @@
                 android:id="@+id/team_name_a"
                 style="@style/HeadingTextView"
                 android:text="@string/team_a"
-                android:textSize="@dimen/teamName" />
+                android:textSize="@dimen/team_name" />
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -57,7 +57,7 @@
                 android:id="@+id/team_name_b"
                 style="@style/HeadingTextView"
                 android:text="@string/team_b"
-                android:textSize="@dimen/teamName" />
+                android:textSize="@dimen/team_name" />
 
             <TextView
                 android:id="@+id/team_b_score"
