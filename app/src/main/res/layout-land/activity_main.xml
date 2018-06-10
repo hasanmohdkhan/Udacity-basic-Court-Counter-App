@@ -1,91 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.example.hasanzian.courtcounter.MainActivity">
+
 
     <LinearLayout
-        android:id="@+id/team_score_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        tools:context="com.example.hasanzian.courtcounter.MainActivity">
+        android:orientation="vertical">
 
-        <LinearLayout style="@style/LinearLayoutCommonStyle">
 
-            <TextView
-                android:id="@+id/team_name_a"
-                style="@style/HeadingTextView"
-                android:text="@string/team_a"
-                android:textSize="@dimen/team_title_for_landscape" />
+        <LinearLayout
+            android:id="@+id/team_score_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/team_a_score"
-                style="@style/ScoreTextView"
-                android:text="@string/score_team_a"
-                android:textSize="@dimen/score_txt_size_landscape" />
+            <LinearLayout style="@style/LinearLayoutCommonStyle">
 
-            <Button
-                style="@style/commonStyle"
-                android:background="@color/colorTeamA"
-                android:onClick="addThreePointsTeamA"
-                android:text="@string/txt_3_points" />
+                <TextView
+                    android:id="@+id/team_name_a"
+                    style="@style/HeadingTextView"
+                    android:text="@string/team_a"
+                    android:textSize="@dimen/team_title_for_landscape" />
 
-            <Button
-                style="@style/commonStyle"
-                android:background="@color/btn_background_color_level_two"
-                android:onClick="addTwoPointsTeamA"
-                android:text="@string/txt_2_points" />
+                <TextView
+                    android:id="@+id/team_a_score"
+                    style="@style/ScoreTextView"
+                    android:text="@string/score_team_a"
+                    android:textSize="@dimen/score_txt_size_landscape" />
 
-            <Button
-                style="@style/commonStyle"
-                android:background="@color/btn_background_color_level_three"
-                android:onClick="addOnePointsTeamA"
-                android:text="@string/txt_free_throw" />
+                <Button
+                    style="@style/commonStyle"
+                    android:background="@color/colorTeamA"
+                    android:onClick="addThreePointsTeamA"
+                    android:text="@string/txt_3_points" />
+
+                <Button
+                    style="@style/commonStyle"
+                    android:background="@color/btn_background_color_level_two"
+                    android:onClick="addTwoPointsTeamA"
+                    android:text="@string/txt_2_points" />
+
+                <Button
+                    style="@style/commonStyle"
+                    android:background="@color/btn_background_color_level_three"
+                    android:onClick="addOnePointsTeamA"
+                    android:text="@string/txt_free_throw" />
+            </LinearLayout>
+
+            <View style="@style/ViewStyle" />
+
+
+            <LinearLayout style="@style/LinearLayoutCommonStyle">
+
+                <TextView
+                    android:id="@+id/team_name_b"
+                    style="@style/HeadingTextView"
+                    android:text="@string/team_b"
+                    android:textSize="@dimen/team_title_for_landscape" />
+
+                <TextView
+                    android:id="@+id/team_b_score"
+                    style="@style/ScoreTextView"
+                    android:text="@string/score_team_a"
+                    android:textSize="@dimen/score_txt_size_landscape" />
+
+                <Button
+                    style="@style/commonStyle"
+                    android:background="@color/colorTeamB"
+                    android:onClick="addThreePointsTeamB"
+                    android:text="@string/txt_3_points" />
+
+                <Button
+                    style="@style/commonStyle"
+                    android:background="@color/colorTeamBLight"
+                    android:onClick="addTwoPointsTeamB"
+                    android:text="@string/txt_2_points" />
+
+                <Button
+                    style="@style/commonStyle"
+                    android:background="@color/colorTeamBLightShade"
+                    android:onClick="addOnePointsTeamB"
+                    android:text="@string/txt_free_throw" />
+            </LinearLayout>
+
         </LinearLayout>
 
-        <View style="@style/ViewStyle" />
 
+        <Button
+            android:id="@+id/reset_button"
+            style="@style/ResetBtnStyle"
+            android:onClick="resetScore" />
 
-        <LinearLayout style="@style/LinearLayoutCommonStyle">
-
-            <TextView
-                android:id="@+id/team_name_b"
-                style="@style/HeadingTextView"
-                android:text="@string/team_b"
-                android:textSize="@dimen/team_title_for_landscape" />
-
-            <TextView
-                android:id="@+id/team_b_score"
-                style="@style/ScoreTextView"
-                android:text="@string/score_team_a"
-                android:textSize="@dimen/score_txt_size_landscape" />
-
-            <Button
-                style="@style/commonStyle"
-                android:background="@color/colorTeamB"
-                android:onClick="addThreePointsTeamB"
-                android:text="@string/txt_3_points" />
-
-            <Button
-                style="@style/commonStyle"
-                android:background="@color/colorTeamBLight"
-                android:onClick="addTwoPointsTeamB"
-                android:text="@string/txt_2_points" />
-
-            <Button
-                style="@style/commonStyle"
-                android:background="@color/colorTeamBLightShade"
-                android:onClick="addOnePointsTeamB"
-                android:text="@string/txt_free_throw" />
-        </LinearLayout>
 
     </LinearLayout>
-
-
-    <Button
-        android:id="@+id/reset_button"
-        style="@style/ResetBtnStyle"
-        android:onClick="resetScore" />
-</RelativeLayout>
+</ScrollView>
